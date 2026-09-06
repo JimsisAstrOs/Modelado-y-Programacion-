@@ -1,8 +1,8 @@
 # Practica 1
 
-# Ejecuciín
+# Ejecución
 
-Abre tu terminal en la raÃ­z de la practica (`practica-1-hash-table/`) y ejecuta los comandos según tu preferencia:
+Abre tu terminal en la raí­z de la practica (`practica-1-hash-table/`) y ejecuta los comandos según tu preferencia:
 
 ## Opción 1: Compilar y ejecutar desde la raíz del proyecto 
 
