@@ -46,3 +46,15 @@ La funciÃ³n hash utilizada es:
 
 ```text
 hash(key) = |key| % 7
+## Reto Opcional: Direccionamiento Abierto con Sondeo Lineal 
+
+Se implementó una version adicional de la tabla hash utilizando direccionamiento abierto y sondeo lineal (TablaHashSondeoLineal.java).
+
+## Detalles de Implementación:
+- **Función de Sondeo:** h(k, i) = (h(k) + i) mod m
+- **Manejo de Eliminaciones:** Se utiliza una marca centinela especial DELETED en lugar de 
+ull al eliminar elementos para no romper búsquedas posteriores.
+
+### Archivos creados:
+- src/TablaHashSondeoLineal.java: Clase con métodos insertar, uscar y eliminar.
+- 	ests/PruebaSondeoLineal.java: Prueba de validación de colisiones y borrado.
