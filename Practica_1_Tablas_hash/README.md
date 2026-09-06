@@ -1,8 +1,8 @@
 # Practica 1
 
-# Ejecución
+# Ejecuciín
 
-Abre tu terminal en la raíz de la práctica (`practica-1-hash-table/`) y ejecuta los comandos según tu preferencia:
+Abre tu terminal en la raÃ­z de la practica (`practica-1-hash-table/`) y ejecuta los comandos según tu preferencia:
 
 ## Opción 1: Compilar y ejecutar desde la raíz del proyecto 
 
@@ -33,28 +33,31 @@ java -cp "src;tests" PruebasTablaHash
 
 Implementación de una tabla hash en Java utilizando **encadenamiento** para manejar las colisiones.
 
-## Descripción
+## DescripciÃ³n
 
-El programa implementa una tabla hash de tamaño `m = 7`, utilizando una `LinkedList` en cada posición de la tabla para almacenar las entradas que tengan la misma posición hash. Se ejecutan 6 pruebas que muestran el funcionamiento de cada método de la clase `TablaHash`, como insersión, eliminación y búsqueda de elementos.
+El programa implementa una tabla hash de tamaño `m = 7`, utilizando una `LinkedList` en cada posición de la tabla para almacenar las entradas que tengan la misma posición hash. Se ejecutan 6 pruebas que muestran el funcionamiento de cada metodo de la clase `TablaHash`, como insersión, eliminación y busqueda de elementos.
 
-Cada entrada está formada por:
+Cada entrada esta formada por:
 
-- `key`: llave entera utilizada para realizar la búsqueda.
+- `key`: llave entera utilizada para realizar la busqueda.
 - `value`: valor asociado a la llave.
 
 La función hash utilizada es:
 
 ```text
 hash(key) = |key| % 7
-## Reto Opcional: Direccionamiento Abierto con Sondeo Lineal 
+```
 
-Se implement� una version adicional de la tabla hash utilizando direccionamiento abierto y sondeo lineal (TablaHashSondeoLineal.java).
+## Reto Opcional: Direccionamiento Abierto con Sondeo Lineal
 
-## Detalles de Implementaci�n:
-- **Funci�n de Sondeo:** h(k, i) = (h(k) + i) mod m
+
+Se implementó una version adicional de la tabla hash utilizando direccionamiento abierto y sondeo lineal (TablaHashSondeoLineal.java).
+
+## Detalles de Implementación:
+- **Función de Sondeo:** h(k, i) = (h(k) + i) mod m
 - **Manejo de Eliminaciones:** Se utiliza una marca centinela especial DELETED en lugar de 
-ull al eliminar elementos para no romper b�squedas posteriores.
+ull al eliminar elementos para no romper búsquedas posteriores.
 
 ### Archivos creados:
-- src/TablaHashSondeoLineal.java: Clase con m�todos insertar, uscar y eliminar.
-- 	ests/PruebaSondeoLineal.java: Prueba de validaci�n de colisiones y borrado.
+- src/TablaHashSondeoLineal.java: Clase con métodos insertar, uscar y eliminar.
+- 	ests/PruebaSondeoLineal.java: Prueba de validación de colisiones y borrado.
