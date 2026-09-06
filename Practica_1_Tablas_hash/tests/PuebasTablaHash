@@ -1,0 +1,47 @@
+public class PruebasTablaHash {
+
+    public static void main(String[] args) {
+        TablaHash hash = new TablaHash();
+
+        System.out.println("--Pruebita 1: con tabla vacía--");
+        System.out.println("Buscar 5: " + hash.buscar(5));
+
+        System.out.println("\n--Pruebita 2: Insertando elementos--");
+        hash.insertar(16, "Dull");
+        hash.insertar(10, "Carmen");
+        hash.insertar(23, "Jimena");
+        hash.insertar(18, "Juan");
+        hash.imprimirTabla();
+
+        System.out.println("Buscar 16: " + hash.buscar(16));
+        System.out.println("Buscar 10: " + hash.buscar(10));
+        System.out.println("Buscar 23: " + hash.buscar(23));
+        System.out.println("Buscar 18: " + hash.buscar(18));
+
+        System.out.println("\n--- Pruebita 3: Colisiones en Cubeta 3 ---");
+        hash.insertar(24, "Maria"); 
+        hash.insertar(31, "Carlos"); 
+        hash.imprimirTabla();
+
+        System.out.println("Buscar 10: " + hash.buscar(10)); 
+        System.out.println("Buscar 24: " + hash.buscar(24)); 
+        System.out.println("Buscar 31: " + hash.buscar(31)); 
+
+        System.out.println("\n--- Pruebita 4: Eliminación con Colisión ---");
+        hash.eliminar(24); 
+        hash.imprimirTabla();
+
+        System.out.println("Buscar 24 tras eliminar: " + hash.buscar(24)); 
+        System.out.println("Buscar 10 tras eliminar 24: " + hash.buscar(10)); 
+        System.out.println("Buscar 31 tras eliminar 24: " + hash.buscar(31)); 
+
+        System.out.println("\n--- Pruebita 5: Eliminar Llave Inexistente ---");
+        boolean eliminado = hash.eliminar(999);
+        System.out.println("Se eliminó 999: " + eliminado); 
+
+        System.out.println("\n--- Pruebita 6: Actualización de Llave Existente ---");
+        hash.insertar(18, "Ana Maria"); 
+        System.out.println("Buscar 18 actualizado: " + hash.buscar(18)); 
+        hash.imprimirTabla();
+    }
+}
